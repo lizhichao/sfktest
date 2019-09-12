@@ -1,0 +1,69 @@
+{
+  "name": "mix/mix",
+  "description": "基于 Swoole 的 FastCGI、常驻内存、协程三模 PHP 高性能框架 http://www.mixphp.cn",
+  "type": "project",
+  "keywords": [
+    "framework",
+    "mixphp",
+    "swoole"
+  ],
+  "homepage": "http://www.mixphp.cn/",
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "liu,jian",
+      "email": "coder.keda@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.0.0",
+    "ext-pdo": "*",
+    "ext-redis": "*",
+    "ext-json": "*",
+    "ext-mbstring": "*",
+    "mix/framework": "~2.0.0",
+    "mix/console": "~2.0.0",
+    "mix/log": "~2.0.0",
+    "mix/http": "~2.0.0",
+    "mix/http-session": "~2.0.0",
+    "mix/http-message": "~2.0.0",
+    "mix/http-server": "~2.0.0",
+    "mix/http-daemon": "~2.0.0",
+    "mix/websocket": "~2.0.0",
+    "mix/websocket-server": "~2.0.0",
+    "mix/websocket-daemon": "~2.0.0",
+    "mix/tcp-session": "~2.0.0",
+    "mix/tcp": "~2.0.0",
+    "mix/tcp-server": "~2.0.0",
+    "mix/tcp-daemon": "~2.0.0",
+    "mix/udp": "~2.0.0",
+    "mix/udp-server": "~2.0.0",
+    "mix/udp-daemon": "~2.0.0",
+    "mix/validate": "~2.0.0",
+    "mix/concurrent": "~2.0.0",
+    "mix/pool": "~2.0.0",
+    "mix/database": "~2.0.0",
+    "mix/redis": "~2.0.0",
+    "mix/cache": "~2.0.0",
+    "mix/auth": "~2.0.0"
+  },
+  "require-dev": {
+    "swoole/ide-helper": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "Common\\": "applications/common/src/",
+      "Console\\": "applications/console/src/",
+      "Http\\": "applications/http/src/",
+      "WebSocket\\": "applications/websocket/src/",
+      "Tcp\\": "applications/tcp/src/",
+      "Udp\\": "applications/udp/src/"
+    },
+    "classmap": [
+      "applications/common/src/ApplicationInterface.php"
+    ],
+    "files": [
+      "applications/common/src/functions.php"
+    ]
+  }
+}

@@ -1,0 +1,2 @@
+[2019-09-11 09:47:48][DEBUG][ERROR] : [Too few arguments to function EasySwoole\Mysqli\Mysqli::insert(), 1 passed in /home/www/apps/easyswoole/App/HttpController/Index.php on line 20 and exactly 2 expected at file:/home/www/apps/easyswoole/vendor/easyswoole/mysqli/src/Mysqli.php line:648]
+[2019-09-11 09:48:24][DEBUG][ERROR] : [Parameter [host] is required at file: line:]
