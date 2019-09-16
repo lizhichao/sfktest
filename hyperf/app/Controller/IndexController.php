@@ -13,6 +13,7 @@ declare(strict_types=1);
 namespace App\Controller;
 
 use App\Model\Users;
+use Swoole\Coroutine;
 
 class IndexController extends Controller
 {
@@ -28,6 +29,9 @@ class IndexController extends Controller
             'email' => 'hfe',
             'age' => 11
         ]);
+        // 模拟业务逻辑处理数据 或者 调用其他服务
+        Coroutine::sleep(0.01);
+
         return $res['id'];
     }
 }

@@ -12,6 +12,7 @@ use Swoft\Http\Message\Response;
 use Swoft\Http\Server\Annotation\Mapping\Controller;
 use Swoft\Http\Server\Annotation\Mapping\RequestMapping;
 use Swoft\View\Renderer;
+use Swoole\Coroutine;
 use Throwable;
 
 /**
@@ -41,6 +42,9 @@ class HomeController
         $user->setName('sw');
         $user->setEmail('em');
         $user->save();
+        // 模拟业务逻辑处理数据 或者 调用其他服务
+        Coroutine::sleep(0.01);
+
         return Context::get()->getResponse()->withContent((string)$user->getId());
     }
 

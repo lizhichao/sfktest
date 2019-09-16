@@ -8,6 +8,7 @@ use Imi\Server\View\Annotation\View;
 use Imi\Server\Route\Annotation\Route;
 use Imi\Server\Route\Annotation\Action;
 use Imi\Server\Route\Annotation\Controller;
+use Swoole\Coroutine;
 
 /**
  * @Controller("/")
@@ -39,6 +40,9 @@ class IndexController extends HttpController
             'name'  => 'we',
             'age'   => 35
         ]);
+        // 模拟业务逻辑处理数据 或者 调用其他服务
+        Coroutine::sleep(0.01);
+
         return $result->getLastInsertId();
     }
 
